@@ -12,8 +12,8 @@ jobs:
     runs-on: ${{ matrix.os_version }}
     strategy:
       matrix:
-        go_version: ['1.18', '1.17', '>=1.18']
-        os_version: ['ubuntu_latest', 'ubuntu-18.04', 'ubuntu-22.02', 'windows 11']
+        go_version: ['1.18']
+        os_version: ['ubuntu-latest','ubuntu-22.04', 'windows 11']
     steps:
     - uses: actions/checkout@v3
 
@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{ matrix.os_version }}
     strategy:
       matrix:
-        os_version: ['ubuntu_latest', 'ubuntu-18.04', 'ubuntu-22.02', 'windows 11']
+        os_version: ['ubuntu-latest', 'ubuntu-22.04', 'windows 11']
     steps:
     - uses: actions/checkout@v3
     - name: Build
